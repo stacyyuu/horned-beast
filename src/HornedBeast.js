@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
 
@@ -13,14 +13,14 @@ class HornedBeast extends React.Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({ count: prevState.count + 1 }))
+    this.setState({ count: this.state.count + 1 })
   };
 
 
   render() {
     return (
-      <Container>
-        <Card style={{width: '18 rem'}}>
+      <Col>
+        <Card className = "h-100">
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
@@ -28,7 +28,7 @@ class HornedBeast extends React.Component {
           <Card.Text><FontAwesomeIcon icon = {faHeart}/> {this.state.count}</Card.Text>
         </Card.Body>
         </Card>
-      </Container>
+      </Col>
     )
   }
 }
