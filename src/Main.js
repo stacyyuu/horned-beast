@@ -11,7 +11,9 @@ class Main extends React.Component {
           {data.map(beast => <HornedBeast
             title={(beast.title)}
             imageUrl={(beast.image_url)}
-            description={(beast.description)} />)}
+            description={(beast.description)} 
+            handleOpen={(this.props.handleShowModal)}
+            />)}
         </Row>
       </>
     )
