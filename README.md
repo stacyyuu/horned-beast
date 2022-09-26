@@ -39,10 +39,10 @@ Actual time needed to complete: 10 mins
 
 Number and name of feature: Feature 4 Display Modal 
 
-Estimate of time needed to complete: 15 mins
+Estimate of time needed to complete: 1 hour
 
-Start time: 9:20pm
+Start time: 4:00pm, 8:30pm
 
-Finish time: 9:30pm
+Finish time: 5:00pm, 9:00pm
 
-Actual time needed to complete: 10 mins
+Actual time needed to complete: 1 hr and 30 mins
