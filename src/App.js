@@ -10,26 +10,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       showBeast: false,
+      selectBeast: {},
     }
   }
 
-  handleCloseModal = () => {
-    this.setState({ showBeast: false });
-  }
-
-  handleShowModal = () => {
-    this.setState({ showBeast: true })
-  }
+  updateState = (newState, newBeast) => this.setState({ showBeast: newState, selectBeast: newBeast});
+  handleCloseModal = () => this.setState({ showBeast: false, selectBeast: {}});
 
   render() {
     return (
       <div className="App">
         <Header />
         <Main
-          handleOpen={this.handleShowModal}
+          updateState = {this.updateState}
         />
         <SelectedBeast
           show={this.state.showBeast}
+          selectBeast={this.state.selectBeast}
           handleClose={this.handleCloseModal}
         />
         <Footer />
@@ -39,14 +36,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-// import {card, button} from react-bootstrap
-// import modal from bootstrap
-// <Button onclick = {this.method} Meow </Button>
-// function = (meow) => { this.setState({count: this.state.money + dollars, money: this.state.money - dollars}); 
-//}
-// this.props.function();
-//class OverdratModal extends React.Component {
-//   render ()
-// }

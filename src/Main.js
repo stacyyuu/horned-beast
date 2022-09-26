@@ -4,6 +4,16 @@ import data from './data.json';
 import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      newState: '',
+      newBeast: {},
+    }
+  }
+
+  updateMainState = () => this.props.updateState(this.state.newState, this.state.newBeast);
+
   render() {
     return (
       <>
@@ -11,9 +21,9 @@ class Main extends React.Component {
           {data.map(beast => <HornedBeast
             title={(beast.title)}
             imageUrl={(beast.image_url)}
+            onClick={() => this.setState({newState: true, newBeast: beast})(this.updateMainState())}
             description={(beast.description)} 
-            handleOpen={(this.props.handleShowModal)}
-            />)}
+            /> )}
         </Row>
       </>
     )
