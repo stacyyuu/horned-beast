@@ -24,7 +24,7 @@ class HornedBeast extends React.Component {
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
-          <Card.Img variant="top" src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.props.onClick}/>
+          <Card.Img variant="top" onClick={this.props.onClick} src={this.props.imageUrl} alt={this.props.title} title={this.props.title}/>
           <Card.Text><FontAwesomeIcon icon = {faHeart} onClick={this.handleClick}/> {this.state.count}</Card.Text>
         </Card.Body>
         </Card>

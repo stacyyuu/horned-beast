@@ -3,19 +3,20 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
+import data from './data.json';
 import SelectedBeast from './SelectedBeast';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBeast: false,
       selectBeast: {},
+      showBeast: false,
     }
   }
 
-  updateState = (newState, newBeast) => this.setState({ showBeast: newState, selectBeast: newBeast});
-  handleCloseModal = () => this.setState({ showBeast: false, selectBeast: {}});
+  updateState = (beast) => this.setState({selectBeast: beast, showBeast: true});
+  handleCloseModal = () => this.setState({showBeast: false});
 
   render() {
     return (
@@ -23,10 +24,11 @@ class App extends React.Component {
         <Header />
         <Main
           updateState = {this.updateState}
+          data = {data}
         />
         <SelectedBeast
-          show={this.state.showBeast}
           selectBeast={this.state.selectBeast}
+          show={this.state.showBeast}
           handleClose={this.handleCloseModal}
         />
         <Footer />
