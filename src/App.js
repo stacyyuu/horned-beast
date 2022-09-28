@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
+import Gallery from './Gallery'
 import data from './data.json';
 import SelectedBeast from './SelectedBeast';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <Gallery />
         <Main
           updateState = {this.updateState}
           data = {data}
