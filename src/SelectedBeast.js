@@ -9,9 +9,9 @@ class SelectedBeast extends React.Component {
             <>
                 <Modal size="lg" show={this.props.show} onHide={this.props.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>{this.props.selectBeast.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+                        <Modal.Title>{this.props.selectBeast.title}</Modal.Title>
                         {this.props.selectBeast.description}
                     </Modal.Body>
                     <Image fluid src={this.props.selectBeast.image_url} alt={this.props.selectBeast.title} title={this.props.selectBeast.title} />
