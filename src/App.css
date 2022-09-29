@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .App {
   text-align: center;
 }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  background-color: #9FB5A3;
+  color: white;
+  height: 80px;
+  font-size: 60px;
+  margin-top: 8px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+  background-color: #F4F0D9;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  background-color: #9FB5A3;
+}
+
